@@ -1,7 +1,12 @@
 import "./App.css";
+import MovieCard from "./assets/components/MovieCard";
 
 function App() {
-  return <> </>;
+  return (
+    <>
+      <MovieCard movie={{title: "Up", release_date: "2024"}}/>
+    </>
+  );
 }
 
 export default App;
