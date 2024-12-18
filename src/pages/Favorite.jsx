@@ -1,15 +1,18 @@
-import React from 'react'
+import "../css/Favorites.css";
 
 function Favorite() {
   return (
     <>
-    
-    <div className="favorite-empty">
+      <div className="favorites">
+        <h2>Your Favorites</h2>
+      </div>
+
+      <div className="favorite-empty">
         <h2>No Favorite Movies Yet</h2>
-        <p>Start adding movies to your favorite and they will appear here</p>
-    </div>
+        <p>Start adding movies to your favorite and they will appear here!</p>
+      </div>
     </>
-  )
+  );
 }
 
-export default Favorite
+export default Favorite;
