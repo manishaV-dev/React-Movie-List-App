@@ -1,6 +1,6 @@
 function MovieCard({ movie }) {
   function onFavoriteClick() {
-    console.log("clicked");
+    console.log("Button clicked");
   }
 
   return (
