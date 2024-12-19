@@ -43,10 +43,27 @@ function Home() {
     loadPopularMovies();
   }, []);
 
-  function handleSearch(e) {
+  const handleSearch = async (e) => {
     e.preventDefault();
-    alert(searchQuery);
-  }
+    // alert(searchQuery);
+
+    if (!searchQuery.trim()) return;
+    if (loading) return;
+    setLoading(true);
+
+    try {
+      const searchResult = await searchMovies(searchQuery);
+      setMovies(searchResult);
+      setError(null);
+    } catch (err) {
+      console.log(err);
+      setError("Failed to search...");
+    } finally {
+      setLoading(false);
+    }
+
+    // setSearchQuery("");
+  };
 
   return (
     <>
